@@ -1,0 +1,20 @@
+﻿package HW1;
+import java.io.IOException;
+public class Main {
+
+    public static void main(String[] args) {
+	System.out.println("Введите число.");
+
+	int b=2, a;
+	try {
+		a = System.in.read();
+		b=a%b;
+		if (b==1)
+			System.out.print("Число - нечётное.");
+		else
+			System.out.print("Число - чётное.");
+	}
+	catch (IOException e) {
+	}
+	}
+}
