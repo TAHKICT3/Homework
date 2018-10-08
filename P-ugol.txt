@@ -1,0 +1,38 @@
+﻿package HW3;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Введите координаты точек.");
+        Scanner ы = new Scanner(System.in);
+        int ax = ы.nextInt();
+        int ay = ы.nextInt();
+        int bx = ы.nextInt();
+        int by = ы.nextInt();
+        int cx = ы.nextInt();
+        int cy = ы.nextInt();
+        int dx = ы.nextInt();
+        int dy = ы.nextInt();
+        if (by >= cy && bx >= cx){
+            if (by > cy && bx > cx){
+                if (by - cy == bx - cx){
+                    System.out.println("Фигура пересечения - квадрат.");
+                    System.out.print("A("+cx+";"+cy+") B("+cx+";"+by+")"+" C("+bx+";"+by+") D("+bx+";"+cy+")");
+                }
+                else {
+                    System.out.println("Фигура пересечения - прямоугольник.");
+                    System.out.print("A("+cx+";"+cy+") B("+cx+";"+by+")"+" C("+bx+";"+by+") D("+bx+";"+cy+")");
+                }
+            }
+            else {
+                System.out.println("Фигура пересечения - прямая.");
+                System.out.print("A("+cx+";"+cy+") B("+bx+";"+by+")");
+            }
+        }
+        else {
+            System.out.println("Фигуры не пересекаются.");
+        }
+    }
+}
