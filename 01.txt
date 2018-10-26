@@ -1,0 +1,22 @@
+package Package1;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int[] a = new int[10];
+        for (int i = 0; i <10; i++)
+        {
+            a[i] = s.nextInt();
+        }
+        int max = a[0];
+        int min = a[0];
+        for (int i = 0; i < 10; i++) {
+            max = Math.max(a[i], max);
+            min = Math.min(a[i], min);
+        }
+        System.out.println(max + " " + min);
+    }
+}

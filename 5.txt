@@ -1,0 +1,39 @@
+package Package5;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int[] a = new int[10];
+        for (int i = 0; i < 10; i++) {
+            a[i] = s.nextInt();
+        }
+        int y = 0, g = 0 ;
+        for (int i = 0; i < 10; i++) {
+            if(a[i] > 0)
+                ++y;
+            if (a[i] < 0)
+                ++g;
+        }
+        int[] a1 = new int[y];
+        int[] a2 = new int[g];
+        int t = 0, j = 0;
+        for (int i = 0; i < 10; i++) {
+            if(a[i] > 0) {
+                a1[t] = a[i];
+                ++t;
+            }
+            if (a[i] < 0) {
+                a2[j] = a[i];
+                ++j;
+            }
+        }
+        for (int i = 0; i < y; i++) {
+            System.out.println(a1[i]);
+        }
+        for (int i = 0; i < g; i++) {
+            System.out.println(a2[i]);
+        }
+    }
+}

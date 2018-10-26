@@ -1,0 +1,51 @@
+package Package6;
+
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int[] a = new int[10];
+        for (int i = 0; i <10; i++)
+        {
+            a[i] = s.nextInt();
+        }
+        int max = a[0];
+        int min = a[0];
+        for (int i = 0; i < 10; i++) {
+            max = Math.max(a[i], max);
+            min = Math.min(a[i], min);
+        }
+        int c = 12;
+        for (int i = 0; i < 10; i++) {
+            if (a[i] == max || a[i] == min)
+                --c;
+        }
+        int[] b = new int[c];
+        int h = 2, u = 0;
+        for (int i = 0; i < c; i++) {
+            if (a[i] == max){
+                if (h == 0) {
+                    ++u;
+                }
+                else{
+                    --h;
+                }
+            }
+            if (a[i] == min){
+                if (h == 0) {
+                    ++u;
+                }
+                else{
+                    --h;
+                }
+            }
+            b[i] = a[i+u];
+        }
+        for (int i =0; i<c; i++)
+        {
+            System.out.println(b[i]);
+        }
+    }
+}
