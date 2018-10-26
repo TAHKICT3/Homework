@@ -1,0 +1,28 @@
+package Package7;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int[][] a = new int[10][10];
+        int[][] b = new int[10][10];
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                a[i][j] = s.nextInt();
+            }
+        }
+        System.out.println("Write k1 and k2.");
+        int k1 = s.nextInt();
+        int k2 = s.nextInt();
+        for (int i = k2; i < 10; i++){
+            for (int j = 0; j < k1; j++){
+                b[i][j+k1] = a[i - k2][j];
+            }
+        }
+        for (int i = 0; i < b.length; i++) {
+            for (int j = 0; j < b[i].length; j++)
+            System.out.println(b[i][j]);
+        }
+    }
+}
