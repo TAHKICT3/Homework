@@ -18,7 +18,7 @@ public class Calculator {
     }
     public static int CalculateScal(Vector a, Vector b) {
         int y;
-        y = a.x * b.x + a.y + b.y;
+        y = a.x * b.x + a.y * b.y;
         return y;
     }
 }
